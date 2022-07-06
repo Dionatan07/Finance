@@ -6,7 +6,6 @@ import util.ConnectionDB;
 
 import java.sql.*;
 
-
 public class FinanceController {
 
     Connection connection = null;

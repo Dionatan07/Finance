@@ -2,6 +2,7 @@ package entities;
 
 import java.util.Date;
 
+
 public class Card {
 
     private Integer id;

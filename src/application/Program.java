@@ -3,7 +3,6 @@ package application;
 import controller.FinanceController;
 import entities.Card;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
