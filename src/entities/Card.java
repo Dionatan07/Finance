@@ -11,6 +11,9 @@ public class Card {
     private Date closingDay;
     private Date paymentDay;
 
+    public Card() {
+    }
+
     public Card(Integer id, String description, String flag, Double limitCard, Date closingDay, Date paymentDay) {
         this.id = id;
         this.description = description;
@@ -19,6 +22,15 @@ public class Card {
         this.closingDay = closingDay;
         this.paymentDay = paymentDay;
     }
+
+    public Card(String description, String flag, Double limitCard, Date closingDay, Date paymentDay) {
+        this.description = description;
+        this.flag = flag;
+        this.limitCard = limitCard;
+        this.closingDay = closingDay;
+        this.paymentDay = paymentDay;
+    }
+
 
     public Integer getId() {
         return id;
