@@ -4,6 +4,7 @@ import entities.Card;
 import util.ConnectionDB;
 
 
+import javax.swing.*;
 import java.sql.*;
 
 public class FinanceController {
@@ -26,7 +27,8 @@ public class FinanceController {
             statement.execute();
             statement.close();
 
-            System.out.println("### Card added successfully ###");
+            JOptionPane.showMessageDialog(null, "### Card added successfully ###");
+
 
         } catch (SQLException e) {
             throw new RuntimeException("Error add card " + e.getMessage());
@@ -51,7 +53,8 @@ public class FinanceController {
             statement.execute();
             statement.close();
 
-            System.out.println("### Card changed successfully ###");
+            JOptionPane.showMessageDialog(null,"### Card changed successfully ###");
+
 
         } catch (SQLException e) {
             throw new RuntimeException("Error change card " + e.getMessage());
@@ -67,7 +70,8 @@ public class FinanceController {
         statement.execute();
         statement.close();
 
-        System.out.println("### Card deleted successfully ###");
+        JOptionPane.showMessageDialog(null,"### Card deleted successfully ###\"");
+
     }
 
     public Card checkCard(int id) throws Exception {
@@ -81,7 +85,7 @@ public class FinanceController {
         if (resultSet.next()) {
             card = new Card();
         } else {
-            System.out.println("Register not found");
+            JOptionPane.showMessageDialog(null,"Register not found");
         }
         return card;
     }
